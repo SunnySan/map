@@ -44,7 +44,7 @@
 			document.getElementById('map'), {
 			center: new google.maps.LatLng(23.602187, 120.788688),
 			zoom: 8,
-			mapTypeControl: true,
+			mapTypeControl: false,
 			mapTypeControlOptions: { position: google.maps.ControlPosition.TOP_CENTER }
 		});
 
@@ -98,8 +98,13 @@
 					var thisMark = new google.maps.Marker({
 						position: location,
 						'icon': (location.nearby && location.nearby=="1"?'images/pin_green1.png':'images/pin_green.png'),
-						'title': location.name,
+						label: {
+							color: 'black',
+							fontWeight: 'bold',
+							text: location.name
+						}
 					});
+						//'title': location.name,
 					thisMark.info = new google.maps.InfoWindow({
 						content: '<h4>' + location.name + '</h4>' + location.desc
 					});
