@@ -44,8 +44,8 @@
 			document.getElementById('map'), {
 			center: new google.maps.LatLng(23.602187, 120.788688),
 			zoom: 8,
-			mapTypeControl: false,
-			mapTypeControlOptions: { position: google.maps.ControlPosition.TOP_CENTER }
+			mapTypeControl: true,
+			mapTypeControlOptions: { style: google.maps.MapTypeControlStyle.DEFAULT, position: google.maps.ControlPosition.LEFT_BOTTOM }
 		});
 
 		map.data.setStyle({
